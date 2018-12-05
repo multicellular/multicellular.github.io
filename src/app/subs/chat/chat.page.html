@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start" (click)="goBack()">
+        <!-- <ion-back-button icon="add" text="Back"></ion-back-button> -->
+        <ion-icon name ="arrow-back" size="large"></ion-icon>
+        <ion-label>Back</ion-label>
+      </ion-buttons>
+    <ion-title>Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list lines="none">
+
+    <ion-item class="margin-bottom" *ngFor="let message of messages">
+      <ion-avatar [slot]="message.id === 'me' ? 'end': 'start'">
+        <img src="assets/icon/favicon.png"/>
+      </ion-avatar>
+      <ion-label text-wrap>
+        <!-- <p>Listen, I've had a pretty messed up day...Listen, I've had a pretty messed up day Listen, I've had a pretty messed up day Listen, I've had a pretty messed up day</p> -->
+        <span [ngStyle]="{float: message.id === 'me' ? 'right': 'left'}">{{message.content}}</span>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <ion-input placeholder="Enter any notes here..." type="text" [(ngModel)]="curMessage"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="add-circle-outline" size="large"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="return-left" size="large" (click)="sendMessage()"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list lines="none">
+    <!-- <ion-list-header>好友列表</ion-list-header> -->
+
+    <ion-item href="/subs/chat" lines="inset">
+      <ion-avatar slot="start">
+        <img src="assets/icon/favicon.png"/>
+      </ion-avatar>
+      <ion-label>
+        <h2>桃花仙人</h2>
+        <h3>-_—</h3>
+        <p>
+          <span>hello nice to meet ypu</span>
+          <span [ngStyle]="{'font-size': '12px','color': '#ccc','margin-left': '12px'}">Oct 13:45</span>
+        </p>
+      </ion-label>
+      <ion-badge color="danger">6</ion-badge>
+    </ion-item>
+
+    <ion-item href="/subs/chat" lines="inset">
+      <ion-avatar slot="start">
+        <img src="assets/icon/favicon.png"/>
+      </ion-avatar>
+      <ion-label>
+        <h2>无名</h2>
+        <h3>今天的风儿甚是喧嚣啊</h3>
+        <p>
+          <span>hi，今天的天气真不错啊</span>
+          <span [ngStyle]="{'font-size': '12px','color': '#ccc','margin-left': '12px'}">星期二</span>
+        </p>
+      </ion-label>
+      <ion-badge color="danger">66</ion-badge>
+    </ion-item>
+
+    <ion-item href="/subs/chat" lines="inset">
+      <ion-avatar slot="start">
+        <img src="assets/icon/favicon.png"/>
+      </ion-avatar>
+      <ion-label>
+        <h2>ruby</h2>
+        <h3>小红</h3>
+        <p>
+          <span>hello👌</span>
+          <span [ngStyle]="{'font-size': '12px','color': '#ccc','margin-left': '12px'}">12月01号</span>
+        </p>
+      </ion-label>
+      <ion-badge color="danger">666</ion-badge>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
