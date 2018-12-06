@@ -41,7 +41,7 @@ export class ChatPage {
             content: data.text
           });
           const contentDom = document.querySelector('ion-content');
-          contentDom.scrollToBottom();
+          setTimeout(()=>{contentDom.scrollToBottom();},0);
         }
       });
   }
