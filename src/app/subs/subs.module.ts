@@ -1,8 +1,9 @@
 import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
+// import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { SubsPageRoutingModule } from './subs.router.module';
 
@@ -15,7 +16,8 @@ import { BlogPage } from './blog/blog.page';
     IonicModule,
     CommonModule,
     FormsModule,
-    SubsPageRoutingModule
+    SubsPageRoutingModule,
+    HttpClientModule
   ],
   declarations: [SubsPage, ChatPage, BlogPage]
 })

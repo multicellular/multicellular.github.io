@@ -16,7 +16,7 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
-        path: 'chat',
+        path: 'chat/:userID',
         // outlet: 'subs',
         component: ChatPage
       },
